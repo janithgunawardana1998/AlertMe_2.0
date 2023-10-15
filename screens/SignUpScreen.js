@@ -4,8 +4,6 @@ import { themeColors } from '../theme'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import {ArrowLeftIcon} from 'react-native-heroicons/solid';
 import { useNavigation } from '@react-navigation/native';
-
-// subscribe for more videos like this :)
 export default function SignUpScreen() {
     const navigation = useNavigation();
   return (
@@ -48,6 +46,7 @@ export default function SignUpScreen() {
                 placeholder='Enter Password'
             />
             <TouchableOpacity
+            onPress={()=> navigation.navigate('Main')}
                 className="py-3 bg-yellow-400 rounded-xl"
             >
                 <Text className="font-xl font-bold text-center text-gray-700">
@@ -58,7 +57,7 @@ export default function SignUpScreen() {
         <Text className="text-xl text-gray-700 font-bold text-center py-5">
             Or
         </Text>
-        <View className="flex-row justify-center space-x-12">
+        <View className="flex-row justify-center space-x-10">
             <TouchableOpacity className="p-2 bg-gray-100 rounded-2xl">
                 <Image source={require('../assets/icons/google.png')} 
                     className="w-10 h-10" />

@@ -43,7 +43,7 @@ export default function LoginScreen() {
             <TouchableOpacity className="flex items-end">
               <Text className="text-gray-700 mb-5">Forgot Password?</Text>
             </TouchableOpacity>
-            <TouchableOpacity 
+            <TouchableOpacity onPress={()=> navigation.navigate('Main')}
               className="py-3 bg-yellow-400 rounded-xl">
                 <Text 
                     className="text-xl font-bold text-center text-gray-700"
@@ -55,24 +55,24 @@ export default function LoginScreen() {
           </View>
           <Text className="text-xl text-gray-700 font-bold text-center py-5">Or</Text>
           <View className="flex-row justify-center space-x-12">
-            <TouchableOpacity className="p-2 bg-gray-100 rounded-2xl">
+            <TouchableOpacity className="p-0 bg-gray-100 rounded-2xl0">
               <Image source={require('../assets/icons/google.png')} className="w-10 h-10" />
             </TouchableOpacity>
-            <TouchableOpacity className="p-2 bg-gray-100 rounded-2xl">
+            <TouchableOpacity className="p-0 bg-gray-100 rounded-2xl">
               <Image source={require('../assets/icons/apple.png')} className="w-10 h-10" />
             </TouchableOpacity>
-            <TouchableOpacity className="p-2 bg-gray-100 rounded-2xl">
+            <TouchableOpacity className="p-0 bg-gray-100 rounded-2xl">
               <Image source={require('../assets/icons/facebook.png')} className="w-10 h-10" />
             </TouchableOpacity>
           </View>
-          <View className="flex-row justify-center mt-7">
+          {/* <View className="flex-row justify-center mt-7">
               <Text className="text-gray-500 font-semibold">
                   Don't have an account?
               </Text>
               <TouchableOpacity onPress={()=> navigation.navigate('SignUp')}>
                   <Text className="font-semibold text-yellow-500"> Sign Up</Text>
               </TouchableOpacity>
-          </View>
+          </View> */}
           
       </View>
     </View>

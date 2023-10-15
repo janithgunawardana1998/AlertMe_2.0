@@ -6,17 +6,6 @@ import { useNavigation } from '@react-navigation/native'
 
 export default function WelcomeScreen() {
     const navigation = useNavigation();
-    const naturalDisasters = [
-        '⚫Floods',
-        '⚫Landslides',
-        '⚫Cyclones',
-        '⚫Droughts',
-        '⚫Heatwaves',
-        '⚫Cold waves',
-        '⚫Hailstorms',
-        '⚫Tornadoes',
-        '⚫Wildfires',
-    ];
     return (
         <SafeAreaView className="flex-1" style={{ backgroundColor: themeColors.bg }}>
             <View className="flex-1 flex justify-around my-4">
@@ -24,17 +13,7 @@ export default function WelcomeScreen() {
                     className="text-white font-bold text-4xl text-center">
                     Alert Me
                 </Text>
-                {/* <Text style={styles.earlywarning}>
-        The AlertMe app will provide you Real-time early warnings
-        disasters in Sri Lanka.
-      </Text>
-      <View>
-        {naturalDisasters.map((disaster, index) => (
-          <Text key={index} style={styles.earlywarning2}>
-            {disaster}
-          </Text>
-        ))}
-      </View> */}
+
                 <Text style={styles.earlywarning}>"Alert-Me" is a powerful app for instant communication of critical information,
                     ensuring the safety of individuals in emergencies.
                     Quickly share vital alerts to keep those under your care safe.</Text>
