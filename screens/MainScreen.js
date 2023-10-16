@@ -4,11 +4,12 @@ import { ArrowLeftIcon } from 'react-native-heroicons/solid';
 import { themeColors } from '../theme'
 import CardScreen from './CardScreen';
 import { StyleSheet } from 'react-native';
+import { ScrollView } from "react-native";
 
 export default function MainScreen() {
     const navigation = useNavigation();
     return (
-        <View className="flex-1 bg-white" style={{ backgroundColor: themeColors.bg }}>
+        <ScrollView className="flex-1 bg-white" style={{ backgroundColor: themeColors.bg }}>
             <SafeAreaView className="flex" >
                 <View className="flex-row justify-start" style={styles.item}>
                     <TouchableOpacity
@@ -20,8 +21,9 @@ export default function MainScreen() {
                 </View>
                 <CardScreen />
                 <CardScreen />
+                <CardScreen />
             </SafeAreaView>
-        </View>
+        </ScrollView>
     )
 }
 
