@@ -1,6 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
-import { Card, Title, Paragraph, Button } from 'react-native-paper';
+import React, { useState, useEffect, Fragment } from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Card, Title, Paragraph, Button, Text } from 'react-native-paper';
+
+const RADIUS_DOT = 3.5;
+
+const ColoredCircle = ({ color }) => {
+    const circleStyles = {
+        backgroundColor: color,
+        width: RADIUS_DOT * 3,
+        height: RADIUS_DOT * 3,
+        borderRadius: RADIUS_DOT,
+    };
+
+    return color ? <View style={[styles.circle, circleStyles]} /> : null;
+};
 
 const CardScreen = () => {
     const [isCardVisible, setCardVisible] = useState(true);
@@ -21,6 +34,8 @@ const CardScreen = () => {
     }, []);
 
 
+
+
     return isCardVisible ? (
         <Card style={styles.card}>
             <Card.Content>
@@ -33,7 +48,9 @@ const CardScreen = () => {
                 style={styles.cardCover}
             />
             <Card.Actions style={styles.cardActions}>
-
+                <Text style={styles.paragraph}>
+                    <ColoredCircle color="green" /> {/* ColoredCircle component */}
+                </Text>
                 <Text style={styles.paragraph}> {dateTime}</Text>
                 <Button style={styles.button} onPress={Dissmiss}>
                     Dismiss
