@@ -22,6 +22,9 @@ const CardScreen = () => {
         setCardVisible(false);
     };
 
+    const Share = () => {
+        setCardVisible(true);
+    };
     const [date, setDate] = useState(null);
     const [dateTime, setDateTime] = useState(null);
 
@@ -55,6 +58,9 @@ const CardScreen = () => {
                 <Button style={styles.button} onPress={Dissmiss}>
                     Dismiss
                 </Button>
+                <Button style={styles.button2} onPress={Share}>
+                    Share
+                </Button>
             </Card.Actions>
         </Card>
     ) : null;
@@ -86,7 +92,12 @@ const styles = StyleSheet.create({
 
     },
     button: {
-        color: 'red'
+        backgroundColor: 'red',
+       
+    },
+    button2: {
+        backgroundColor: '#FF9130'
+        
     }
 
 });
