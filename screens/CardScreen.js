@@ -68,7 +68,7 @@ const CardScreen = () => {
 
 const styles = StyleSheet.create({
     card: {
-        margin: 16,
+        margin: 10,
     },
     cardTitle: {
         fontSize: 24,
@@ -93,11 +93,11 @@ const styles = StyleSheet.create({
     },
     button: {
         backgroundColor: 'red',
-       
+
     },
     button2: {
         backgroundColor: '#FF9130'
-        
+
     }
 
 });
